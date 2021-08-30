@@ -37,7 +37,9 @@ ActiveRecord::Schema.define(version: 2021_08_30_135739) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "avatar", default: "https://miro.medium.com/max/720/1*W35QUSvGpcLuxPo3SRTH4w.png"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
