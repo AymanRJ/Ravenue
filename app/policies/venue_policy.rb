@@ -3,17 +3,21 @@ class VenuePolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def index?
-      true
-    end
+  def index?
+    true
+  end
 
-    def show?
-      true
-    end
+  def show?
+    true
+  end
 
-    def create?
-      true
-    end
+  def new?
+    true
+  end
+
+  def create?
+    true
   end
 end
