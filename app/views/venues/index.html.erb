@@ -1,21 +1,18 @@
-<%# TODO: Build index %>
-
 <div class="container">
   <div class="cards">
-    <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div class= "card-text">
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
+        <%@venues.each do |venue| %>
+          <div class="card-trip">
+             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+            <div class="card-trip-infos">
+              <div class= "card-text">
+              <h2><%= venue.title %></h2> 
+              <p><%= venue.location %> <%= venue.capacity %></p>
+              </div>
+            <h2 class="card-trip-pricing">£<%= venue.price %></h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+            </div>
+          </div>
+        <% end %>
     </div>
-  </div>
 </div>
 
-<%= @venues.each do |venue| %>
-
-<% end %>
