@@ -11,6 +11,7 @@ class VenuesController < ApplicationController
 
   def new
     @venue = Venue.new
+    authorize @venue
   end
 
   def create
