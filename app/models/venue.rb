@@ -5,4 +5,5 @@ class Venue < ApplicationRecord
   validates :location, presence: true
   validates :capacity, presence: true
   validates :price, presence: true
+  has_many_attached :photos
 end
