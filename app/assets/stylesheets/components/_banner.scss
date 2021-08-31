@@ -1,0 +1,10 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  background-repeat: none;
+  box-shadow: 2px 0px 10px $green;
+  h1 {
+    color: $white
+  }
+}
