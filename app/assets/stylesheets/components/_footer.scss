@@ -1,19 +1,19 @@
 .footer {
-  background: #5B5F97;
+  background: $red;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: #C1F7DC;
-  border-top: 5px solid #C1F7DC;
+  color: $green;
+  border-top: 5px solid $green;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: #C1F7DC;
+  color: $green;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;

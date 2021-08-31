@@ -1,11 +1,9 @@
 // Specific CSS for your home-page
-.container-yellow {
-background-color: #FCAB10;
-opacity: 0.7;
+.container-blue {
+background-color: $gray ;
 height: 100vh;
  text-align: center;
 }
-
 
 h1 {
   font-size: 80px;
