@@ -33,6 +33,7 @@ cities = ["Eixample", "Sabadell", "Raval", "Martorell", "Sant Antoni", "Castelld
 
   img_party = URI.open("https://source.unsplash.com/1600x900/?party")
   test_venue.photos.attach(io: img_party, filename: 'venue.png', content_type: 'image/png')
+  test_venue.save
   sleep(2)
 end
 

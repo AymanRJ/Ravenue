@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: $red;
+
 }
 
 // .navbar-lewagon-white {
@@ -15,7 +16,7 @@
   width: 40px;
 }
 
-.navbar, a {
+.navbar a {
   color: black;
   font-size: 32px;
   font-weight: bold;
@@ -25,17 +26,17 @@
   .avatar {
     margin-left: 24px;
   }
-  .button_blue_outline {
-    margin-left: 24px;
-    background-color: $white;
-    font-size: 24px;
+}
+.navbar .button_blue_outline {
+  margin-left: 24px;
+  background-color: $white;
+  font-size: 24px;
+  color: black;
+  border: 4px solid black;
+  &:hover {
     color: black;
-    border: 4px solid black;
-    &:hover {
-      color: black;
-      background-color: $green;
+    background-color: $green;
 
-    }
   }
 }
 
