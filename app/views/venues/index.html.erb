@@ -2,17 +2,16 @@
   <div class="cards">
         <%@venues.each do |venue| %>
           <div class="card-trip">
-             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+             <%= cl_image_tag venue.photos.first.key, height: 300, width: 400, crop: :fill %>
             <div class="card-trip-infos">
               <div class= "card-text">
-              <h2><%= venue.title %></h2> 
+              <h2><%= venue.title %></h2>
               <p><%= venue.location %> <%= venue.capacity %></p>
               </div>
-            <h2 class="card-trip-pricing">£<%= venue.price %></h2>
-            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+            <h2 class="card-trip-pricing"><%= venue.price %>€</h2>
+            <%= cl_image_tag venue.user.avatar.key, crop: :fill, class:"card-trip-user avatar-bordered" %>
             </div>
           </div>
         <% end %>
     </div>
 </div>
-
