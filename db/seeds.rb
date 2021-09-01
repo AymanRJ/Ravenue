@@ -15,7 +15,7 @@ User.destroy_all
 puts "EVERYTHING DESTROYED"
 
 
-
+cities = ["Eixample", "Sabadell", "Raval", "Martorell", "Sant Antoni", "Castelldefels", "Born", "Sants", "Badalona", "Barceloneta"]
 10.times do
   test_user = User.create!(email: Faker::Internet.email,
                          password: "password",
@@ -25,8 +25,8 @@ puts "EVERYTHING DESTROYED"
   img_avatar = URI.open("https://thispersondoesnotexist.com/image")
   test_user.avatar.attach(io: img_avatar, filename: 'avatar.png',content_type: 'image/png' )
 
-  test_venue = Venue.new(title: Faker::Address.full_address ,
-                        location: Faker::Address.city,
+  test_venue = Venue.create!(title: Faker::Address.full_address ,
+                        location: cities.pop,
                         capacity: rand(10..125),
                         price: rand(1..20)*10,
                         user: test_user)
