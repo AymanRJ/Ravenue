@@ -28,7 +28,7 @@ puts "EVERYTHING DESTROYED"
   test_venue = Venue.create!(title: Faker::Address.full_address ,
                         location: Faker::Address.city,
                         capacity: rand(10..125),
-                        price: rand(200..5000),
+                        price: rand(1..20)*10,
                         user: test_user)
 
   img_party = URI.open("https://source.unsplash.com/1600x900/?party")
