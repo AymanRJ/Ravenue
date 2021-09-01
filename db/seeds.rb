@@ -25,7 +25,7 @@ puts "EVERYTHING DESTROYED"
   img_avatar = URI.open("https://thispersondoesnotexist.com/image")
   test_user.avatar.attach(io: img_avatar, filename: 'avatar.png',content_type: 'image/png' )
 
-  test_venue = Venue.create!(title: Faker::Address.full_address ,
+  test_venue = Venue.new(title: Faker::Address.full_address ,
                         location: Faker::Address.city,
                         capacity: rand(10..125),
                         price: rand(1..20)*10,
@@ -33,6 +33,7 @@ puts "EVERYTHING DESTROYED"
 
   img_party = URI.open("https://source.unsplash.com/1600x900/?party")
   test_venue.photos.attach(io: img_party, filename: 'venue.png', content_type: 'image/png')
+  test_venue.save
   sleep(2)
 end
 
