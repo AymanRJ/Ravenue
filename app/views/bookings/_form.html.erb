@@ -1,0 +1,6 @@
+<%= simple_form_for [@venue, @booking] do |f| %>
+  <%= f.input :event_name %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>

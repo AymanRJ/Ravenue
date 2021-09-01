@@ -10,8 +10,8 @@
             <p> <i class="fas fa-users"></i> <%= venue.capacity %> </p>
             <p> <i class="fas fa-dollar-sign"></i> <%= venue.price %></p>
           </div>
-           <%# <%= cl_image_tag venue.photos.first.key, height: 300, width: 400, crop: :fill %>
-          <img class="card-img"src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+           <%= cl_image_tag venue.photos.first.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
+          <%# <img class="card-img"src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> %>
         <% end %>
       <% end %>
     </div>
