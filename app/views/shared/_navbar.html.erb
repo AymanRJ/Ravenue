@@ -6,7 +6,7 @@
 </button>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto align-items-center">
-    <%= link_to "Venues", venues_path %>
+    <%= link_to "Venues", venues_path, class:"mx-3" %>
     <% if user_signed_in? %>
       <li class="nav-item dropdown">
         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= current_user.avatar_url %>" />
