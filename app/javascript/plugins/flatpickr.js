@@ -1,7 +1,10 @@
 import flatpickr from "flatpickr";
 
 const initFlatpickr = () => {
-  flatpickr(".datepicker", {});
+  const availabilities = document.getElementById("availabilities")
+  if (availabilities) {
+  flatpickr(".datepicker", { disable: JSON.parse(availabilities.dataset.availabilities)});
+  }
 }
 
 export { initFlatpickr };

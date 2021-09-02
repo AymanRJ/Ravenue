@@ -13,7 +13,7 @@ display: flex;
 }
 
 h2 {
-  color: white;
+  color: $white;
   text-shadow: 0 0 15px rgba($red, 1);
 
 }
@@ -21,7 +21,7 @@ h2 {
 
 .card-element   {
   // background: $green;
-  background: rgba(white, 1);
+  background: rgba($white, 1);
   height: 180px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 3px;
@@ -34,11 +34,11 @@ h2 {
       background: $red;
 
     p, h3, a {
-      color: white;
+      color: $white;
     }
   }
   h3:hover {
-    color: white !important;
+    color: $white !important;
   }
 }
 
