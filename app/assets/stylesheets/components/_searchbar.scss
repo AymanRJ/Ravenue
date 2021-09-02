@@ -23,4 +23,7 @@
     border: transparent;
     padding-left: 12px;
   }
+  input:focus {
+    outline: none;
+  }
 }
