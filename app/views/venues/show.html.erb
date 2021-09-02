@@ -19,10 +19,10 @@
       <h2 class="text-center"><%= @venue.title %></h2>
       <div class="venue-info-header-info">
         <div class="venue-info-headers">
-          <h3><strong>Location: </strong></h3>
-          <h3><strong>Capacity: </strong></h3>
-          <h3><strong>Price: </strong></h3>
-          <h3><strong>Bookings: </strong></h3>
+          <h3>Location: </h3>
+          <h3>Capacity:</h3>
+          <h3>Price:</h3>
+          <h3>Bookings:</h3>
         </div>
         <div class="venue-info-description">
           <h4><%= @venue.location %></h4>
@@ -32,6 +32,7 @@
         </div>
       </div>
     </div>
+
     <div class="booking">
       <%= render 'bookings/form', venue: @venue, booking: @booking %>
     </div>

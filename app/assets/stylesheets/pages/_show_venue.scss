@@ -1,7 +1,11 @@
 .container-show{
-  background-color: $gray ;
+  background-color: $black ;
   height: 100vh;
   padding-top: 40px;
+}
+
+body {
+  background-color: $black ;
 }
 
 .photo-section {
@@ -57,8 +61,8 @@
 }
 
 .info-booking{
+  height: 400px;
   display: flex;
-  height: 20vh;
   margin-top: 16px;
   justify-content: space-between;
   h2 {
@@ -73,7 +77,11 @@
   height: 100%;
   width: 48%;
   border-radius: 10px;
-  background-color: $green;
+  background-color: transparent;
+  color: $white;
+  &:hover {
+    box-shadow: 0 0 10px rgba($red, 1);
+  }
 }
 
 .venue-info-header-info {
@@ -83,14 +91,27 @@
 }
 
 .booking {
-  height: 100%;
   width: 48%;
   border-radius: 10px;
-  background-color: $green;
-  padding: 8px;
-  font-size: 50px;
-  font-weight: bold;
-  a:hover {
-    color: lightgray;
+  background-color: transparent;
+  padding: 24px;
+  font-size: 16px;
+  color: $white;
+  position: relative;
+  &:hover {
+    box-shadow: 0 0 10px rgba($red, 1);
   }
+}
+
+#new_booking .form-control {
+  border-radius: 10px;
+}
+
+
+#new_booking .submit-venue {
+  border-radius:15px;
+  border: 2px solid $red;
+  box-shadow: 1px 1px 10px $red;
+  position: absolute;
+  left: 38%
 }
