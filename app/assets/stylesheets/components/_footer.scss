@@ -5,15 +5,14 @@
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: $green;
-  border-top: 5px solid $green;
+  color: $white;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: $green;
+  color: $white;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
