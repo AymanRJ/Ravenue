@@ -4,10 +4,6 @@
 
 }
 
-// .navbar-lewagon-white {
-//   background-color: white;
-// }
-
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -17,9 +13,9 @@
 }
 
 .navbar a {
+  font-size: 18px;
   color: $black;
-  font-size: 32px;
-  font-weight: bold;
+   font-weight: bold;
   &:hover {
     color: $green;
   }
@@ -27,6 +23,7 @@
     margin-left: 24px;
   }
 }
+
 .navbar .button_blue_outline {
   margin-left: 24px;
   background-color: $white;
@@ -36,7 +33,6 @@
   &:hover {
     color: $black;
     background-color: $green;
-
   }
 }
 
@@ -46,4 +42,9 @@
  a {
    font-weight: lighter;
  }
+}
+
+.nav-link-login {
+  font-family: $body-font;
+  font-weight: bold;
 }

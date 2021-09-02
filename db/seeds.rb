@@ -15,7 +15,7 @@ User.destroy_all
 puts "EVERYTHING DESTROYED"
 
 
-cities = ["Eixample", "Sabadell", "Raval", "Martorell", "Sant Antoni", "Castelldefels", "Born", "Sants", "Badalona", "Barceloneta"]
+cities = ["Eixample", "Sabadell", "Raval", "Martorell", "Sant Antoni", "Castelldefels", "La Ribera Barcelona", "Sants", "Badalona", "Barceloneta"]
 10.times do
   test_user = User.create!(email: Faker::Internet.email,
                          password: "password",
