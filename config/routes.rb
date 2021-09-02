@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get :dashboard
     end
   end
-  resources :venues do 
-    resources :bookings, only: [ :new, :create ]
+  resources :venues do
+    resources :bookings, only: [ :create ]
   end
 end
