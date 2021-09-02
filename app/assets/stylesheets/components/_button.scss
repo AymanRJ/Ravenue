@@ -5,12 +5,10 @@
   color:black;
   font-weight: bold;
   background: $white;
-
-
   &:hover{
-background-color: black;
-color: $white;
-  cursor: pointer;
+    color: $white;
+    background-color: transparent;
+    cursor: pointer;
   }
 }
 

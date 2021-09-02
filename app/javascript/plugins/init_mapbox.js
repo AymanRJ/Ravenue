@@ -8,11 +8,17 @@ const initMapbox = () => {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/mapbox/dark-v10'
     });
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
-    new mapboxgl.Marker()
+
+      const element = document.createElement('i')
+      element.className = 'fas fa-map-marker-alt';
+element.style.fontSize="30px";
+element.style.color="#FF6B6C"
+
+    new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
       .addTo(map);
     });
