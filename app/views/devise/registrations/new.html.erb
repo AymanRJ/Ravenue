@@ -24,7 +24,7 @@
                 input_html: { class: "input-blue-border", autocomplete: "email" }%>
   </div>
   <div class="col-md-6">
-    <%= f.input :avatar, as: :file, wrapper_html: { class: 'input-wrapper' } %>
+    <%= f.input :avatar, as: :file, wrapper_html: { class: 'input-wrapper' }, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: 'Upload a photo'%>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),

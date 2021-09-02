@@ -27,7 +27,12 @@ body {
   height: 100px;
 }
 
-.dates-flexed {
-  display: flex;
-  justify-content: space-between;
+.upload-photo {
+  padding: 10px 48px;
+  cursor: pointer;
+  font-weight: 500;
+  background: white;
+  border-radius: 5px;
+  color: black;
+  margin-top: 33px;
 }
