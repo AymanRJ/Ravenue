@@ -105,4 +105,11 @@
   box-shadow: 1px 1px 10px $red;
   position: absolute;
   left: 38%
+
+
+.header-and-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
 }

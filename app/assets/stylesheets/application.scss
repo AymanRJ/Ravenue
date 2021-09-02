@@ -15,3 +15,14 @@
 @import "components/form";
 @import "flatpickr/dist/flatpickr";
 @import "pages/index";
+
+
+.full-vh {
+  background: red;
+  height: 100vh;
+}
+
+
+a:hover {
+  color: white !important;
+}
