@@ -20,7 +20,7 @@
               <h3><%= venue.title %></h3>
               <p> <i class="fas fa-map-marker-alt"></i> <%= venue.location %> </p>
               <p> <i class="fas fa-users"></i> <%= venue.capacity %> </p>
-              <p> <i class="fas fa-dollar-sign"></i> <%= venue.price %></p>
+              <p class="price-tag"> <i class="fas fa-dollar-sign"></i> <%= venue.price %> / day</p>
             </div>
             <%= cl_image_tag venue.photos.first.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
             <%# <img class="card-img"src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> %>
@@ -32,7 +32,7 @@
   </div>
   <div class="map-container">
     <div id="map"
-      style="position: sticky; top: 0; width: 800px; height: 100vh;"
+      style="position: sticky; top: 0; width: 100%; height: 100vh;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
