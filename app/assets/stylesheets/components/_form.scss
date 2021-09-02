@@ -1,5 +1,5 @@
 body {
-  color: white;
+  color: $white;
   font-weight: bold;
 }
 
@@ -25,4 +25,9 @@ body {
 
 .input-wrapper {
   height: 100px;
+}
+
+.dates-flexed {
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,15 +1,15 @@
 .button_blue_outline {
-  border: 4px solid white;
+  border: 4px solid $white;
   padding: 5px 40px;
   border-radius: 5px;
   color:black;
   font-weight: bold;
-  background: white;
+  background: $white;
 
 
   &:hover{
 background-color: black;
-color:white;
+color: $white;
   cursor: pointer;
   }
 }
