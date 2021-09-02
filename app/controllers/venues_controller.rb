@@ -3,7 +3,8 @@ class VenuesController < ApplicationController
 
   def index
     @venues = policy_scope(Venue)
-     @markers = @venues.geocoded.map do |venue|
+    @venues = @venues.near(params[:location], 5) if params[:location].present?
+    @markers = @venues.geocoded.map do |venue|
       {
         lat: venue.latitude,
         lng: venue.longitude
