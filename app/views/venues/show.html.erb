@@ -22,16 +22,18 @@
           <h3><strong>Location: </strong></h3>
           <h3><strong>Capacity: </strong></h3>
           <h3><strong>Price: </strong></h3>
+          <h3><strong>Bookings: </strong></h3>
         </div>
         <div class="venue-info-description">
           <h4><%= @venue.location %></h4>
           <h4><%= @venue.capacity %></h4>
           <h4><%= @venue.price %></h4>
+          <h4><%= @venue.bookings.count %></h4>
         </div>
       </div>
     </div>
     <div class="booking">
-      <%= link_to "Book", new_venue_booking_path(@venue) %>
+      <%= render 'bookings/form', venue: @venue, booking: @booking %>
     </div>
   </div>
 </div>
