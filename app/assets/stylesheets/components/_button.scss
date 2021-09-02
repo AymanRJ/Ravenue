@@ -1,13 +1,14 @@
 .button_blue_outline {
-  border: 4px solid #4A56FF;
+  border: 4px solid white;
   padding: 5px 40px;
   border-radius: 5px;
-  color:#4A56FF;
+  color:black;
   font-weight: bold;
+  background: white;
 
 
   &:hover{
-background-color: #4A56FF;
+background-color: black;
 color:white;
   cursor: pointer;
   }

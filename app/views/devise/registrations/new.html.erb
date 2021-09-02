@@ -1,4 +1,4 @@
-<div class="container form-container-2 mt-5 text-center">
+<div class="container form-container-2 text-center full-vh">
 
 <h2>SIGN UP</h2>
 
@@ -24,7 +24,7 @@
                 input_html: { class: "input-blue-border", autocomplete: "email" }%>
   </div>
   <div class="col-md-6">
-    <%= f.input :avatar, as: :file %>
+    <%= f.input :avatar, as: :file, wrapper_html: { class: 'input-wrapper' } %>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
