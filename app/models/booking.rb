@@ -8,7 +8,17 @@ class Booking < ApplicationRecord
   validate :end_date_after_start_date
   validate :start_date_after_today
   
+  before_save :set_rate
+
+  def total_rent_days
+    (end_date - start_date).to_i
+  end
+
   private
+  
+  def set_rate
+    self.rate = total_rent_days * venue.price
+  end
 
   def end_date_after_start_date
     return if end_date.blank? || start_date.blank?
@@ -25,7 +35,7 @@ class Booking < ApplicationRecord
   end
 
   def available
-    bookings = Booking.where(["venue_id =?", venue_id])
+    bookings = Booking.where(["venue_id =?", venue_id]).where.not(id: id) #this where.not is important when you want to update after creation
     date_ranges = bookings.map { |b| b.start_date..b.end_date }
 
     date_ranges.each do |range|
