@@ -12,8 +12,6 @@
 
 #main-searchbar {
   padding-left: 0;
-  margin-top: 40px;
-  margin-bottom: 50px;
   display: flex;
   border-radius: 50px;
   background-color: white;
@@ -26,4 +24,9 @@
   input:focus {
     outline: none;
   }
+}
+
+.homepage-search {
+  margin-top: 56px;
+  height: 50px;
 }
