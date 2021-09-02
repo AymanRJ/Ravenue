@@ -1,8 +1,17 @@
+<div class="container form-container-2 mt-5 text-center">
+
 <%= simple_form_for(@venue) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :location %>
-  <%= f.input :capacity %>
-  <%= f.input :price %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
+  <%= f.input :title,
+    input_html: { class: "input-blue-border", autocomplete: "first-name" }  %>
+
+  <%= f.input :location,
+  input_html: { class: "input-blue-border", autocomplete: "first-name" } %>
+  <%= f.input :capacity,
+  input_html: { class: "input-blue-border", autocomplete: "first-name" } %>
+  <%= f.input :price,
+  input_html: { class: "input-blue-border", autocomplete: "first-name" } %>
+  <%= f.input :photos, as: :file, input_html: { class: "mb-4", multiple: true } %>
+  <%= f.submit class:"button_blue_outline mb-4"%>
 <% end %>
+
+</div>
