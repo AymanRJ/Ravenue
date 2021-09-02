@@ -6,8 +6,7 @@
   position: absolute;
   top: 8px;
   bottom: 8px;
-  right: 8px;
-
+  left: 448px;
 }
 
 .search-form-control .form-control {
@@ -23,7 +22,6 @@
 }
 
 #main-searchbar {
-  padding-left: 250px;
   padding-right: 250px;
   margin-bottom: 50px;
 }
@@ -32,4 +30,22 @@
 .form-rounded {
   border-radius: 50px;
   background-color: #C1F7DC;
+}
+
+@media (max-width:1200px){
+  .search-form-control .btn {
+    left: 360px;
+  }
+}
+
+@media (max-width:1000px){
+  .search-form-control .btn {
+    left: 240px;
+  }
+}
+
+@media (max-width:768px){
+  .search-form-control .btn {
+    left: 152px;
+  }
 }
