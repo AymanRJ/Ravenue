@@ -16,3 +16,32 @@
 a {
   text-decoration: none!important;
 }
+
+.upload-photo {
+  padding: 12px 119px;
+  cursor: pointer;
+  background: white;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  margin-top: 1px;
+  margin-bottom: 25px;
+}
+
+.upload-photos {
+  padding: 12px 308px;
+  cursor: pointer;
+  background: white;
+  border-radius: 5px;
+  color: black;
+  margin-top: -1px;
+  font-weight: bold;
+}
+
+#new_booking .submit-venue {
+  border-radius: 5px;
+  position: absolute;
+  left: 38%;
+  height: 36px;
+  margin-top: 2px;
+}

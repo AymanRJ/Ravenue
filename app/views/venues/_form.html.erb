@@ -10,7 +10,8 @@
   input_html: { class: "input-blue-border", autocomplete: "first-name" } %>
   <%= f.input :price,
   input_html: { class: "input-blue-border", autocomplete: "first-name" } %>
-  <%= f.input :photos, as: :file, input_html: { class: "mb-4", multiple: true } %>
+  <%= f.label :photos, "Photos*" %>
+  <%= f.input :photos, as: :file, wrapper_html: { class: 'input-wrapper', multiple: true }, input_html: { class: 'd-none' }, label_html: { class: 'upload-photos'}, label: 'Upload photos'%>
   <%= f.submit class:"button_blue_outline mb-4"%>
 <% end %>
 
