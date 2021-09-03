@@ -9,4 +9,13 @@ class Venue < ApplicationRecord
   validates :price, presence: true
   validates :photos, presence: true
   has_many_attached :photos
+
+  def booked_dates
+    bookings.map do |booking|
+      {
+        from: booking.start_date,
+        to: booking.end_date
+      }
+    end
+  end
 end

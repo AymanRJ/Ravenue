@@ -16,12 +16,7 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
     @booking = Booking.new
     authorize @venue
-    @bookings = @venue.bookings.map do |booking|
-      {
-        from: booking.start_date,
-        to: booking.end_date
-      }
-    end
+    @bookings = @venue.booked_dates
   end
 
   def new
