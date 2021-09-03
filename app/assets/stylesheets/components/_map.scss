@@ -11,10 +11,14 @@
 
 }
 
-
-.mapboxgl-popup-content h4, a {
+.mapboxgl-popup-content a {
   font-size: 20px;
-      color: black;
+  color: black;
+}
+
+.mapboxgl-popup-content h4 {
+  font-size: 20px;
+  color: black;
 
 }
 .mapboxgl-popup-content p {
