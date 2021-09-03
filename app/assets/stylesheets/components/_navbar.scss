@@ -1,7 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: $red;
-
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -47,4 +46,16 @@
 .nav-link-login {
   font-family: $body-font;
   font-weight: bold;
+}
+
+.dropdown-item {
+
+
+  &:hover {
+    background-color: $red;
+  }
+}
+
+.text-logo {
+  font-size: 25px!important;
 }
