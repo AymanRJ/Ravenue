@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to venue_path(@venue)
     else
+      @bookings = @venue.booked_dates
       render 'venues/show'
     end
   end
