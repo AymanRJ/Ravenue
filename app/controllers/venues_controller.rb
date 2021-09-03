@@ -29,7 +29,8 @@ class VenuesController < ApplicationController
     @venue.user = current_user
     authorize @venue
     if @venue.save
-      redirect_to venue_path(@venue)
+      flash[:notice] = "Your new venue successfully added!"
+      redirect_to  dashboard_pages_path
     else
       render :new
     end
