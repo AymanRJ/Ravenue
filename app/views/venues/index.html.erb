@@ -16,7 +16,9 @@
               <p class="price-tag"> <i class="fas fa-dollar-sign"></i> <%= venue.price %> / day</p>
             </div>
             <%= cl_image_tag venue.photos.first.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
-            <%# <img class="card-img"src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> %>
+            <%= image_tag venue.user.avatar_url, height: 50, width: 50 , class:"avatar index-position shadow" %>
+
+
           <% end %>
         </div>
       <% end %>
