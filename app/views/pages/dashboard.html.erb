@@ -2,36 +2,67 @@
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a class="nav-item nav-link active" id="nav-my-venues-tab" data-toggle="tab" href="#nav-my-venues" role="tab" aria-controls="nav-my-venues" aria-selected="true">My Venues</a>
     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">My Bookings</a>
-    <a class="nav-item nav-link" id="nav-my-reservations-tab" data-toggle="tab" href="#nav-my-reservations" role="tab" aria-controls="nav-my-reservations" aria-selected="false">My Reservations</a>
   </div>
 </nav>
+
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-my-venues" role="tabpanel" aria-labelledby="nav-my-venues-tab">
     <div class="container">
-      <h1>Hello <%= current_user.first_name %></h1>
+      <div class="user-greeting">
+        <h1>Hello <%= current_user.first_name %></h1>
+        <%= image_tag current_user.avatar_url, class:"card-trip-user avatar-bordered"%>
+      </div>
       <h2>My Venues</h2>
       <div class="row">
         <% @my_venues.each do |venue| %>
-          <div class="card-element m-0 p-0 mx-3 my-3 d-flex justify-content-between position-relative" style="height: 40%">
-            <div class="text-box p-3 d-flex flex-column justify-content-end" >
+        <div class="row col-6 ">
+          <div class="card-element card-element-dashboard m-0 p-0 mx-3 my-3 d-flex justify-content-between position-relative">
+            <div class="text-box p-3 d-flex flex-column" >
               <h2><%= venue.title %></h2>
               <p> <i class="fas fa-map-marker-alt"> </i> <%= venue.location %> </p>
               <p> <i class="fas fa-users"> </i> <%= venue.capacity %> </p>
               <p> <i class="fas fa-dollar-sign"> </i> <%= venue.price %> / day</p>
               <p> <i class="fas fa-cart-plus"> </i> <%= venue.bookings.count %></p>
-              <%venue.bookings.each_with_index do |booking, index| %>
-                <p>booking <%= index + 1%> : </p>
-                <p> <%= booking.start_date %> - <%= booking.end_date %> | <%= booking.total_rent_days %> days | return: <%= booking.rate %></p>
+              <%venue.bookings.each_with_index do |booking| %>
                 <%@my_toal_returns += booking.rate %>
               <%end %>
               <h3>Total returns: <%=@my_toal_returns%></h3>
             </div>
             <%= cl_image_tag venue.photos.first.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
           </div>
+        </div>
+        <% end %>
+      </div>
+      <h2> My booked venues</h2>
+      <div class="row">
+        <% @my_reservations.each do |my_booking| %>
+        <div class="row col-6  ">
+          <div class="card-element card-element-dashboard card-element-dashboard-request m-0 p-0 mx-3 my-3 d-flex justify-content-between position-relative">
+            <div class="text-box p-3 d-flex flex-column justify-content-end">
+              <div class="row">
+                <h2> Request from <%= my_booking.user.first_name %></h2>
+                <%= image_tag my_booking.user.avatar_url, class:"card-trip-user avatar-bordered"%>
+              </div>
+              <%= my_booking.event_name %>
+              <p>Status: <%= my_booking.status %></p>
+              <p>Start Date: <%= my_booking.start_date %></p>
+              <p>End Date: <%= my_booking.end_date %></p>
+              <p>Total days: <%= my_booking.total_rent_days %></p>
+              <h3>Total income: <%= my_booking.rate %></h3>
+              <% if my_booking.status == "pending" %>
+                <div>
+                  <%= link_to "Accept", accept_booking_path(my_booking), method: :patch, class:"button-request button_blue_outline" %>
+                  <%= link_to "Reject", reject_booking_path(my_booking), method: :patch, class:"button-request button_blue_outline" %>
+                </div>
+              <% end %>
+           </div>
+          </div>
+        </div>
         <% end %>
       </div>
     </div>
   </div>
+
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
     <div class="container">
       <h2>My Bookings</h2>
@@ -54,28 +85,6 @@
           </div>
         <% end %>
       </div>
-    </div>
-  </div>
-  <div class="tab-pane fade" id="nav-my-reservations" role="tabpanel" aria-labelledby="nav-my-reservations-tab">
-    <h2>My Reservations</h2>
-    <div class="row">
-      <% @my_reservations.each do |my_booking| %>
-        <div class="card-element m-0 p-0 mx-3 my-3 d-flex justify-content-between position-relative" style="height: 40%">
-          <div class="text-box p-3 d-flex flex-column justify-content-end">
-            <h2><%= my_booking.event_name %></h2>
-            <p>Venue: <%= my_booking.venue.title %></p>
-            <p>Location: <%= my_booking.venue.location %></p>
-            <p>Capacity: <%= my_booking.venue.capacity %></p>
-            <p>price: <%= my_booking.venue.price %> / day</p>
-            <p>Status: <%= my_booking.status %></p>
-            <p>Start Date: <%= my_booking.start_date %></p>
-            <p>End Date: <%= my_booking.end_date %></p>
-            <p>Total days: <%= my_booking.total_rent_days %></p>
-            <h3>Total costs: <%= my_booking.rate %></h3>
-          </div>
-          <%= cl_image_tag my_booking.venue.photos.first.key, height: 300, width: 400, crop: :fill, class:"card-img" %>
-        </div>
-      <% end %>
     </div>
   </div>
 </div>

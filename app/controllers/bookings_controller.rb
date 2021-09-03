@@ -20,8 +20,23 @@ class BookingsController < ApplicationController
     end
   end
 
+  def accept
+    @booking = Booking.find(params[:id])
+    @booking.accepted!
+    authorize @booking
+    redirect_to dashboard_pages_path
+  end
+
+  def reject
+    @booking = Booking.find(params[:id])
+    @booking.rejected!
+    authorize @booking
+    redirect_to dashboard_pages_path
+  end
+
   private
+
   def booking_params
-    params.require(:booking).permit(:event_name, :start_date, :end_date)
+    params.require(:booking).permit(:event_name, :start_date, :end_date, :status)
   end
 end

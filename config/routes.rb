@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   resources :venues do
     resources :bookings, only: [ :create ]
   end
+  resources :bookings, only: [] do
+    member do
+      patch :accept
+      patch :reject
+    end
+  end
 end
