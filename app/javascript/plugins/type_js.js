@@ -16,7 +16,7 @@ const initTyped = () => {
       backSpeed: 50,
       showCursor: false
     });
-  }   
+  }
 }
 
 export { initTyped };
