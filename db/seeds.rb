@@ -25,7 +25,7 @@ cities = ["Eixample", "Sabadell", "Raval", "Martorell", "Sant Antoni", "Castelld
   img_avatar = URI.open("https://thispersondoesnotexist.com/image")
   test_user.avatar.attach(io: img_avatar, filename: 'avatar.png',content_type: 'image/png' )
 
-  test_venue = Venue.new(title: Faker::Superhero.name ,
+  test_venue = Venue.new(title: Faker::BossaNova.song,
                         location: cities.pop,
                         capacity: rand(10..125),
                         price: rand(1..20)*10,
