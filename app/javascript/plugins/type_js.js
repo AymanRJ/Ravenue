@@ -4,7 +4,7 @@ const initTyped = () => {
   if (document.querySelector('#home-page-title')) {
     new Typed('#home-page-title', {
       strings: ['<strong><em> AWAITS </em></strong>',
-                '<strong><em> IN AN ^200 APARTMENT </em></strong>',
+                '<strong><em> IN A ^200 FLAT </em></strong>',
                 '<strong><em> IN A ^200 GARDEN</em></strong>',
                 '<strong><em> IN A ^200 WAREHOUSE </em></strong>',
                 '<strong><em> WHEREVER </em></strong>',
