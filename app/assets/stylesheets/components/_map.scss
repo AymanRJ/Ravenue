@@ -1,0 +1,24 @@
+.mapboxgl-popup {
+  min-width: 200px;
+  padding: 20px;
+
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+    color: black;
+
+}
+
+
+.mapboxgl-popup-content h4, a {
+  font-size: 20px;
+      color: black;
+
+}
+.mapboxgl-popup-content p {
+  font-size: 30px;
+  margin: 0px;
+  color: $red;
+}

@@ -1,4 +1,4 @@
-<div class="container form-container-2 text-center full-vh">
+<div class="container form-container-2 text-center mt-5 pt-2">
 
 <h2>SIGN UP</h2>
 
@@ -24,7 +24,8 @@
                 input_html: { class: "input-blue-border", autocomplete: "email" }%>
   </div>
   <div class="col-md-6">
-    <%= f.input :avatar, as: :file, wrapper_html: { class: 'input-wrapper' }, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: 'Upload a photo'%>
+    <%= f.label :avatar, "Photo*" %>
+    <%= f.input :avatar, as: :file, wrapper_html: { class: 'input-wrapper photos-input' }, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: 'Upload a photo'%>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),

@@ -7,8 +7,9 @@ class Venue < ApplicationRecord
   validates :location, presence: true
   validates :capacity, presence: true
   validates :price, presence: true
-  validates :photos, presence: true
   has_many_attached :photos
+
+  validates :photos, attached: true
 
   def booked_dates
     bookings.map do |booking|

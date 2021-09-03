@@ -27,6 +27,7 @@ import "bootstrap";
 import { initFlatpickr } from "../plugins/flatpickr";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initPopup } from '../functions/init_popup';
+import { initTyped } from '../plugins/type_js';
 
 
 // Internal imports, e.g:
@@ -38,4 +39,5 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initFlatpickr();
   initPopup();
+  initTyped();
 });

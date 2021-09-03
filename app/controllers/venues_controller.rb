@@ -7,7 +7,8 @@ class VenuesController < ApplicationController
     @markers = @venues.geocoded.map do |venue|
       {
         lat: venue.latitude,
-        lng: venue.longitude
+        lng: venue.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { venue: venue })
       }
     end
   end
@@ -29,7 +30,8 @@ class VenuesController < ApplicationController
     @venue.user = current_user
     authorize @venue
     if @venue.save
-      redirect_to venue_path(@venue)
+      flash[:notice] = "Your new venue successfully added!"
+      redirect_to  dashboard_pages_path
     else
       render :new
     end

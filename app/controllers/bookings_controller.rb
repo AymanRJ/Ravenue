@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
+      flash[:notice] = "Booking request successfully sent!"
       redirect_to venue_path(@venue)
     else
       @bookings = @venue.booked_dates
