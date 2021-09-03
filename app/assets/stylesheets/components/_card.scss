@@ -83,3 +83,17 @@ background-size: cover;  height: 180px;
   height: 85%;
   width: 100%;
 }
+
+
+.card-requests {
+  width: 100%;
+  box-shadow: 0 0 10px rgba($red, 1);
+  &:hover {
+    box-shadow: 0 0 10px rgba($white, 1);
+
+  }
+}
+
+.avatar-request {
+  margin-left: 120px;
+}
